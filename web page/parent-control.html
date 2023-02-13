@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,70 +7,34 @@
 </head>
 
 <body>
+    <script src="https://www.puck-js.com/puck.js"></script>
     <div class="content">
         <h1>Parent Control</h1>
         <div class="quad-col">
             <div class="item-col">
-                <h2 class="col">Start Time</h2>
-                <form action="/action_page.php" class="box">
-                    <input type="time" name="start" required>
-                </form>
-                <form action="/action_page.php" class="box">
-                    <input type="time" name="start" required>
-                </form>
-                <form action="/action_page.php" class="box">
-                    <input type="time" name="start" required>
-                </form>
-                <form action="/action_page.php" class="box">
-                    <input type="time" name="start" required>
-                </form>
-                <form action="/action_page.php" class="box">
-                    <input type="time" name="start" required>
-                </form>
+                <h2 class="col">Time: Hour</h2>
+                <textarea id="hour" class="box" placeholder="Hour" required></textarea>
+                <code> "<span id="hourValue">n/a</span>" </code>
             </div>
             <div class="item-col">
-                <h2 class="col">End Time</h2>
-                <form action="/action_page.php" class="box">
-                    <input type="time" name="end" required>
-                </form>
-                <form action="/action_page.php" class="box">
-                    <input type="time" name="end" required>
-                </form>
-                <form action="/action_page.php" class="box">
-                    <input type="time" name="end" required>
-                </form>
-                <form action="/action_page.php" class="box">
-                    <input type="time" name="end" required>
-                </form>
-                <form action="/action_page.php" class="box">
-                    <input type="time" name="end" required>
-                </form>
+                <h2 class="col">Time: Minute</h2>
+                <textarea id="minute" class="box" placeholder="Minute" required></textarea>
+                <code> "<span id="minValue">n/a</span>" </code>
             </div>
             <div class="item-col">
-                <h2 class="col">Action</h2>
-                <textarea id="action" class="box" name="action" placeholder="What do the kids do at this time?" required></textarea>
-                <textarea id="action" class="box" name="action" placeholder="What do the kids do at this time?" required></textarea>
-                <textarea id="action" class="box" name="action" placeholder="What do the kids do at this time?" required></textarea>
-                <textarea id="action" class="box" name="action" placeholder="What do the kids do at this time?" required></textarea>
-                <textarea id="action" class="box" name="action" placeholder="What do the kids do at this time?" required></textarea>
+                <h2 class="col">Type of Reminders</h2>
+                <textarea id="action" class="box" placeholder="buzz, beep, LED,...?" required></textarea>
             </div>
             <div class="item-col">
-                <h2 class="col">Details</h2>
-                <textarea id="detail" class="box" name="details" placeholder="Describe more about the action if needed..."></textarea>
-                <textarea id="detail" class="box" name="details" placeholder="Describe more about the action if needed..."></textarea>
-                <textarea id="detail" class="box" name="details" placeholder="Describe more about the action if needed..."></textarea>
-                <textarea id="detail" class="box" name="details" placeholder="Describe more about the action if needed..."></textarea>
-                <textarea id="detail" class="box" name="details" placeholder="Describe more about the action if needed..."></textarea>
+                <h2 class="col">Reminders</h2>
+                <textarea id="detail" class="box" placeholder="Enter your message"></textarea>
             </div>
             <div class="item-col">
-                <h2>Save</h2>
-                <input class="box" type="submit" value="Yes">
-                <input class="box" type="submit" value="Yes">
-                <input class="box" type="submit" value="Yes">
-                <input class="box" type="submit" value="Yes">
-                <input class="box" type="submit" value="Yes">
+                <h2 class="col">Save</h2>
+                <button id="save">Yes</button>
             </div>
         </div>
     </div>
+    <script src="parent-control.js"></script>
 </body>
 </html>
