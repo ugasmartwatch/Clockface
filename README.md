@@ -12,4 +12,4 @@ Feb 1-4th: Researched about collecting and saving information from the web inter
            
            And/or: patterns of the reminders (i.e. different or the same for every day, difference of weekdays and weekend)
            
-Feb 5th:
+Feb 5-13th: Hard code reminder message and alarm through website. Can't collect and parse data into sched libraries.
