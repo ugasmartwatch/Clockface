@@ -1,23 +1,41 @@
+var message = document.getElementById("detail").value;
+var time = document.getElementById("hour").value * 3600000) + (document.getElementById("minute").value * 60000;
+// var BANGLE_CODE = `
+// Bangle.loadWidgets();
+// Bangle.drawWidgets();
+// require("sched").getAlarms();
+// require("sched").newDefaultAlarm();
+// require("sched").setAlarm("myalarm", {
+//   t: (2 * 3600000) + (16 * 60000),
+// });
+// require("sched").reload();
+// Bangle.buzz();
+// Bangle.setLCDPower(1);
+// E.showMessage(message).then(function(v) {
+//   if (v) print("'Yes' chosen");
+//   else print("'No' chosen");
+// });
+// `;
+
 var BANGLE_CODE = `
 Bangle.loadWidgets();
 Bangle.drawWidgets();
 require("sched").getAlarms();
 require("sched").newDefaultAlarm();
 require("sched").setAlarm("myalarm", {
-  msg: "Hello",
-  t: (2 * 3600000) + (16 * 60000),
+  msg: message,
+  t: time,
+  rp: 
 });
 require("sched").reload();
 Bangle.buzz();
 Bangle.setLCDPower(1);
-g.clear();
-g.setFontAlign(0,0); // center font
-g.setFont('6x8', 2);
-g.drawString("Set Reminder: Done!", g.getWidth()/2, g.getHeight()/2);
+E.showMessage(message).then(function(v) {
+  if (v) print("'Yes' chosen");
+  else print("'No' chosen");
+});
 `;
 
-// document.getElementById("detail").value,
-// document.getElementById("hour").value * 3600000) + (document.getElementById("minute").value * 60000
 var connection;
 document.getElementById("save").addEventListener("click", function() {
   // disconnect if connected already
