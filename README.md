@@ -13,3 +13,4 @@ Feb 1-4th: Researched about collecting and saving information from the web inter
            And/or: patterns of the reminders (i.e. different or the same for every day, difference of weekdays and weekend)
            
 Feb 5-13th: Hard code reminder message and alarm through website. Can't collect and parse data into sched libraries.
+Feb 14th: Tried to call E.showMessage and E.showPrompt to parse the messgae data. Still cannot figure out how to parse the time to sched.js
