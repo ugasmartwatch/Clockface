@@ -17,12 +17,15 @@ Feb 5-13th: Hard code reminder message and alarm through website. Can't collect 
 Feb 14th: Tried to call E.showMessage and E.showPrompt to parse the messgae data. Still cannot figure out how to parse the time to sched.js
 
 Feb 15-28th: Tried to parse value with Stringify and JSON parse but can't not push the alarm into to watch. 
+
              May use compareTo to make alarm and notification if parse still does not work out.
 
 March 1-10th: Midterm and Spring break
 
 March 11-15th: Got interaction between website and the watch. Successfully collected values to create alarm from the web and push the alarm to the watch. The alarm also worked on the watch.
+
            To do: check what happens if two alarms are set at the same time
                   check if the alarm is still there if the watch is reset
+                  
 March 16-22nd:
              
