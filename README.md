@@ -21,5 +21,8 @@ Feb 15-28th: Tried to parse value with Stringify and JSON parse but can't not pu
 
 March 1-10th: Midterm and Spring break
 
-March 11-15th: 
+March 11-15th: Got interaction between website and the watch. Successfully collected values to create alarm from the web and push the alarm to the watch. The alarm also worked on the watch.
+           To do: check what happens if two alarms are set at the same time
+                  check if the alarm is still there if the watch is reset
+March 16-22nd:
              
