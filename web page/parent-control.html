@@ -8,33 +8,39 @@
 
 <body>
     <script src="https://www.puck-js.com/puck.js"></script>
+    <button id="btn" onclick="addAlarm()">New Alarm</button>
+    <button id="save">Save</button>
+    <p id="demo">Test</p>
     <div class="content">
         <h1>Parent Control</h1>
         <div class="quad-col">
             <div class="item-col">
-                <h2 class="col">Time: Hour</h2>
-                <textarea id="hour" class="box" placeholder="Hour" required></textarea>
-                <code> "<span id="hourValue">n/a</span>" </code>
+                <h2 class="col">Time</h2>
+                <div class="item" id="timeDiv">
+                    <input type="time" id="time" class="item" required>
+                </div>
             </div>
             <div class="item-col">
-                <h2 class="col">Time: Minute</h2>
-                <textarea id="minute" class="box" placeholder="Minute" required></textarea>
-                <code> "<span id="minValue">n/a</span>" </code>
-            </div>
-            <div class="item-col">
-                <h2 class="col">Type of Reminders</h2>
-                <textarea id="action" class="box" placeholder="buzz, beep, LED,...?" required></textarea>
+                <h2 class="col">Date</h2>
+                <div class="item" id="dateDiv">
+                    <input type="date" id="date" class="item">
+                </div>
             </div>
             <div class="item-col">
                 <h2 class="col">Reminders</h2>
-                <textarea id="detail" class="box" placeholder="Enter your message"></textarea>
+                <div class="item" id="detailDiv">
+                    <input type="text" id="detail" class="item">
+                </div>
             </div>
             <div class="item-col">
-                <h2 class="col">Save</h2>
-                <button id="save">Yes</button>
+                <h2 class="col">Repeat Pattern</h2>
+                <div class="item" id="patternDiv">
+                    <input type="text" id="repeat" class="item">
+                </div>
             </div>
         </div>
     </div>
+    
     <script src="parent-control.js"></script>
 </body>
 </html>
