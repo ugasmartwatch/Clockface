@@ -1,7 +1,3 @@
-const message = document.getElementById("detail");
-const hour = document.getElementById("hour");
-const min = document.getElementById("minute");
-
 var connection;
 document.getElementById("save").addEventListener("click", function() {
   // disconnect if connected already
@@ -10,23 +6,30 @@ document.getElementById("save").addEventListener("click", function() {
     connection = undefined;
   }
 
-// set snooze
-// test 2 alarms at the same time
+  const mess = document.getElementById("detail").value;
+  const time = document.getElementById("time").value;
+  const timeHour = time.substring(0,2) * 3600000;
+  const timeMin = time.substring(3,5) * 60000;
+
+  const date = document.getElementById("date").value;
+  document.getElementById("demo").innerHTML = date;
+
+  const repeat = document.getElementById("repeat").value;
+
   var BANGLE_CODE = `
 Bangle.loadWidgets();
 Bangle.drawWidgets();
 require("sched").getAlarms();
-require("sched").newDefaultAlarm();
-require("sched").setAlarm("myalarm", {
+require("sched").setAlarm("alarm", {
   msg: "${mess}",
-  t: ${time},
-  rp: true
+  t: ${timeHour+timeMin},
+  date: "${date}"
 });
 require("sched").reload();
 Bangle.buzz();
 Bangle.setLCDPower(1);
 `;
-  
+
   // Connect
   Puck.connect(function(c) {
     if (!c) {
@@ -46,18 +49,28 @@ Bangle.setLCDPower(1);
   });
 });
 
-// create a button to connect the watch first
-// maybe load the alarms from the watch to the web page
-// if alarms are loaded, maybe create a button to delete alarm
+function addAlarm() {
+  const newTime = document.createElement('INPUT');
+  newTime.setAttribute("type", "time");
+  newTime.setAttribute("id", "time");
+  newTime.setAttribute("class", "item");
+  document.getElementById("timeDiv").appendChild(newTime); 
 
-// create a button to add new alarm
-// create a button to save it into the watch
-// hide the alarm icon on watch bar
-// maybe remove the alarm app from the watch so the kids could not modify the alarm
+  const newDate = document.createElement('INPUT');
+  newDate.setAttribute("type", "date");
+  newDate.setAttribute("id", "date");
+  newDate.setAttribute("class", "item");
+  document.getElementById("dateDiv").appendChild(newDate); 
 
-// create a parent div element
-// create child div element x 6
-// create h2 element x 6
-// create input element x 6
-// append child div to parent div
-// append child h2 and input to div
+  const newMsg = document.createElement('INPUT');
+  newMsg.setAttribute("type", "text");
+  newMsg.setAttribute("id", "detail");
+  newMsg.setAttribute("class", "item");
+  document.getElementById("detailDiv").appendChild(newMsg); 
+
+  const newPtrn = document.createElement('INPUT');
+  newPtrn.setAttribute("type", "text");
+  newPtrn.setAttribute("id", "repeat");
+  newPtrn.setAttribute("class", "item");
+  document.getElementById("patternDiv").appendChild(newPtrn); 
+}
