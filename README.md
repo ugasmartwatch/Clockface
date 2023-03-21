@@ -28,9 +28,12 @@ March 11-15th: Got interaction between website and the watch. Successfully colle
                   check if the alarm is still there if the watch is reset
                   
 March 16-21st: Changed layout of the time (created time box instead two int input boxes), added date input box, and repeat pattern. Created a button to make multiple alarms.
+           When two alarms are set at the same time. The last one that added to the watch will be first. After stop the alarm, the other one will be on immediately.
+           If the watch is reset, the alarm is still there
 
            Problem: the date is set one day before the actual date from the web (e.g. if user chooses 03/31/2023 from the web, the alarm would appear as 03/30/2023)
-                    repeat pattern takes boolen (everyday repeat or not) or object (frequency of day, week, month, or year)
+                    the alarm is set once on default, no repeat. 
+                    repeat pattern only takes boolen (everyday repeat or not) or object (frequency of day, week, month, or year)
                     
 March 22-April
                     
