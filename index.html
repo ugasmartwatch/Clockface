@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Parent Control</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <script src="https://www.puck-js.com/puck.js"></script>
+    <button id="btn" onclick="addAlarm()">New Alarm</button>
+    <button id="save">Save</button>
+    <p id="demo">Test</p>
+    <div class="content">
+        <h1>Parent Control</h1>
+        <div class="quad-col">
+            <div class="item-col">
+                <h2 class="col">Time</h2>
+                <div class="item" id="timeDiv">
+                    <input type="time" id="time" class="item" required>
+                </div>
+            </div>
+            <div class="item-col">
+                <h2 class="col">Date</h2>
+                <div class="item" id="dateDiv">
+                    <input type="date" id="date" class="item">
+                </div>
+            </div>
+            <div class="item-col">
+                <h2 class="col">Reminders</h2>
+                <div class="item" id="detailDiv">
+                    <input type="text" id="detail" class="item">
+                </div>
+            </div>
+            <div class="item-col">
+                <h2 class="col">Repeat Pattern</h2>
+                <div class="item" id="patternDiv">
+                    <input type="text" id="repeat" class="item">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="parent-control.js"></script>
+</body>
+</html>
